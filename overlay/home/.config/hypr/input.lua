@@ -1,11 +1,12 @@
 -- Keep only your personal input overrides here. Uncommented settings below
 -- replace Omarchy's defaults.
 
--- Caps Lock swap is also in keyd (tap Esc, hold Ctrl). Hypr keeps the swap
--- if keyd is stopped. Both Shifts cancel Caps Lock.
+-- Caps Lock is owned by keyd (tap Esc, hold Ctrl; physical Esc is Caps).
+-- Do not also set caps:swapescape here: Hypr would swap keyd's output
+-- and Caps would be Caps again. Both Shifts still cancel Caps Lock.
 hl.config({
   input = {
-    kb_options = "caps:swapescape,shift:both_capslock_cancel",
+    kb_options = "shift:both_capslock_cancel",
   },
 })
 
