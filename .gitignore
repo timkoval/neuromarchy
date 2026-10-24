@@ -1,0 +1,3 @@
+*.bak.*
+overlay/home/.ssh/id_*
+overlay/home/.ssh/known_hosts

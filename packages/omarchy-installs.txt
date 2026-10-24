@@ -1,0 +1,6 @@
+# Catalog commands bootstrap runs (after packages).
+# Lines are omarchy subcommands after `omarchy`.
+
+install terminal kitty
+install browser firefox
+plugin enable omarchy.tailscale

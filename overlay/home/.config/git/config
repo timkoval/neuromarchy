@@ -1,0 +1,48 @@
+# See https://git-scm.com/docs/git-config
+# Machine-specific gh credential helpers are not stored here.
+# After `gh auth login`, run: gh auth setup-git
+
+[user]
+	name = Tim Koval
+	email = timkoval00@gmail.com
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	cm = commit -m
+	ca = commit -am
+	dc = diff --cached
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	amend = commit --amend -m
+	unstage = reset HEAD --
+	merged = branch --merged
+	unmerged = branch --no-merged
+	nonexist = remote prune origin --dry-run
+	delmerged = "! git branch --merged | egrep -v '(^\\*|main|master|dev|staging)' | xargs git branch -d"
+	delnonexist = remote prune origin
+	update = submodule update --init --recursive
+	foreach = submodule foreach
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+[commit]
+	verbose = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = -version:refname
+[rerere]
+	enabled = true
+	autoupdate = true

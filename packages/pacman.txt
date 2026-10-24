@@ -1,0 +1,26 @@
+# extra/ packages for omarchy pkg add. No AUR.
+# Keep one package per line. Comments start with #.
+
+direnv
+atuin
+just
+yazi
+pgcli
+keyd
+tailscale
+go-yq
+hyperfine
+duf
+dust
+gdu
+ast-grep
+sad
+doggo
+gping
+kitty
+fish
+bash-preexec
+lsof
+strace
+firefox
+tmux
