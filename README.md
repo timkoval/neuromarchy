@@ -47,7 +47,7 @@ Partial runs:
 
 **Omarchy catalog:** Kitty as default terminal, Firefox beside Vivaldi, Tailscale bar plugin + receive service.
 
-**Home overlay:** Hypr scrolling + 3-finger `scroll_move`, Fish vi + aliases, Kitty `shell fish --login`, tmux Fish + C-s prefix, git identity, fcitx Dvorak, bashrc that sources Omarchy rc and guards cargo env, SSH config for github.com and `ai`.
+**Home overlay:** Hypr scrolling + 3-finger `scroll_move`, Fish vi + aliases, Kitty `shell fish --login`, tmux Fish + C-s prefix, git identity, fcitx Dvorak, bashrc that sources Omarchy rc and guards cargo env, SSH config for github.com and `ai`. Neovim keeps Omarchy LazyVim; overlay adds oil, rustaceanvim + crates (`.direnv`/`target` excluded), vim-tmux-navigator, and Kickstart aliases (`<leader>sf`, `<leader>rn`).
 
 **System overlay:** keyd (Caps tap Esc / hold Ctrl, UK ISO extra keys), `hid_apple iso_layout=1`, SDDM greeter reads `/etc/vconsole.conf`.
 

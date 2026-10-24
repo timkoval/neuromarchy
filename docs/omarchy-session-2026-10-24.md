@@ -138,6 +138,18 @@ Use `if`, not `&&`. A failing `[ -f ]` as the last command of a sourced file sti
 
 These files live in this repo’s `overlay/` and are applied by `./bootstrap.sh`.
 
+## 10. Neovim (LazyVim + neuronvim habits)
+
+Keep Omarchy LazyVim and snacks. Overlay only:
+
+- `lua/plugins/oil.lua` — `-` and `<leader>-`
+- `lua/plugins/tmux-navigator.lua` — `C-h/j/k/l`
+- `lua/plugins/rust.lua` — rustaceanvim `excludeDirs` for `.direnv` and `target`
+- `lazyvim.json` extra `lang.rust` (crates.nvim included)
+- `lua/config/keymaps.lua` — `<leader>sf` snacks files, `<leader>rn` rename
+
+Do not replace `init.lua` / theme-hotreload.
+
 ---
 
 ## Files touched
