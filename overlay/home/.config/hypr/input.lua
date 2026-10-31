@@ -4,9 +4,11 @@
 -- Caps Lock is owned by keyd (tap Esc, hold Ctrl; physical Esc is Caps).
 -- Do not also set caps:swapescape here: Hypr would swap keyd's output
 -- and Caps would be Caps again. Both Shifts still cancel Caps Lock.
+-- Mouse natural_scroll matches elitebook/neuronix and the Omarchy trackpad.
 hl.config({
   input = {
     kb_options = "shift:both_capslock_cancel",
+    natural_scroll = true,
   },
 })
 

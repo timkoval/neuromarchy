@@ -24,3 +24,5 @@ lsof
 strace
 firefox
 tmux
+kicad
+kicad-library
