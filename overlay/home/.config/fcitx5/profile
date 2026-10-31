@@ -12,6 +12,11 @@ Name=keyboard-us-dvorak
 # Layout
 # Layout=
 
+[Groups/0/Items/1]
+# Name
+Name=keyboard-us
+# Layout
+# Layout=
+
 [GroupOrder]
 0=Default
-

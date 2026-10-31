@@ -47,7 +47,7 @@ Partial runs:
 
 **Omarchy catalog:** Kitty as default terminal, Firefox beside Vivaldi, Tailscale bar plugin + receive service.
 
-**Home overlay:** Hypr scrolling + 3-finger `scroll_move`, mouse and touchpad natural scroll, Command+D apps menu, Fish vi + aliases, Kitty `shell fish --login` plus shift+insert image paste over SSH, tmux Fish + C-s prefix, git identity, fcitx Dvorak, bashrc that sources Omarchy rc and guards cargo env, SSH config for github.com and `ai`. Neovim keeps Omarchy LazyVim; overlay adds oil, rustaceanvim + crates (`.direnv`/`target` excluded), vim-tmux-navigator, and Kickstart aliases (`<leader>sf`, `<leader>rn`). KiCad 10 binds Backspace as Delete (MacBook Delete key).
+**Home overlay:** Hypr scrolling + 3-finger `scroll_move`, mouse and touchpad natural scroll, Command+D apps menu, Fish vi + aliases, Kitty `shell fish --login` plus shift+insert image paste over SSH, tmux Fish + C-s prefix, git identity, fcitx Dvorak + US QWERTY, bashrc that sources Omarchy rc and guards cargo env, SSH config for github.com and `ai`. Neovim keeps Omarchy LazyVim; overlay adds oil, rustaceanvim + crates (`.direnv`/`target` excluded), vim-tmux-navigator, and Kickstart aliases (`<leader>sf`, `<leader>rn`). KiCad 10 binds Backspace as Delete (MacBook Delete key). Focusing a `kicad` window switches the seat to QWERTY for the usual M/R/W hotkeys; other windows stay Dvorak. The bar keyboard widget cycles the same pair.
 
 **System overlay:** keyd (Caps tap Esc / hold Ctrl, UK ISO extra keys), `hid_apple iso_layout=1`, SDDM greeter reads `/etc/vconsole.conf`.
 

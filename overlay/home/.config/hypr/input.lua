@@ -5,12 +5,45 @@
 -- Do not also set caps:swapescape here: Hypr would swap keyd's output
 -- and Caps would be Caps again. Both Shifts still cancel Caps Lock.
 -- Mouse natural_scroll matches elitebook/neuronix and the Omarchy trackpad.
+-- Dvorak stays first so Omarchy binds keep using the Dvorak keysyms.
+-- QWERTY is layout 1 for KiCad hotkeys (M/R/W and friends).
 hl.config({
   input = {
+    kb_layout = "us,us",
+    kb_variant = "dvorak,",
     kb_options = "shift:both_capslock_cancel",
     natural_scroll = true,
   },
 })
+
+-- KiCad's class is "kicad" for the project manager and editors. Switch only
+-- typed keyboards plus the fcitx virtual one (main); skip lid/power so the
+-- bar layout widget does not follow those devices.
+local function set_seat_layout(idx)
+  for _, name in ipairs({
+    "keyd-virtual-keyboard",
+    "apple-mtp-keyboard",
+    "hl-virtual-keyboard-fcitx5",
+  }) do
+    hl.exec_cmd("hyprctl switchxkblayout " .. name .. " " .. idx)
+  end
+  -- fcitx is the main keyboard; KiCad is GTK and reads this IM.
+  local im = (idx == 1) and "keyboard-us" or "keyboard-us-dvorak"
+  hl.exec_cmd("fcitx5-remote -s " .. im)
+end
+
+local function apply_layout_for_window(window)
+  if type(window) ~= "table" or not window.class then
+    window = hl.get_active_window()
+  end
+  local class = window and window.class or ""
+  set_seat_layout((class == "kicad") and 1 or 0)
+end
+
+hl.on("window.active", apply_layout_for_window)
+hl.on("config.reloaded", function()
+  apply_layout_for_window()
+end)
 
 -- Keyboard layout and options.
 -- See https://wiki.hypr.land/Configuring/Basics/Variables/#input
